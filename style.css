@@ -110,15 +110,53 @@
     -webkit-box-shadow: 0 20px 39px yellow, 0 15px 7px yellow;
     box-shadow: 0 20px 39px yellow, 0 15px 7px yellow;
   }
+  
+  hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 2px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
 
-  .number-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .namesearch {
+    text-align: center;
+    display: inline-flex;
+    flex: 1 1 300px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .numbersearch {
+    display: inline-flex;
+    text-align: center;
+    flex: 1 1 300px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
   }
   
-  .name-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .searchIcon {
+    padding: 0.5rem;
+  }
+  
+  .searchBox {
+    border: 0;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    flex: 1;
+    text-align:center;
+  }
+  
+  .numbersearch{
+    width: 100%;
+    text-align:center;
+  }
+
+  .namesearch{
+    width: 100%;
+    text-align:center;
   }
