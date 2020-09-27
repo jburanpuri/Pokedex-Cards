@@ -110,3 +110,15 @@
     -webkit-box-shadow: 0 20px 39px yellow, 0 15px 7px yellow;
     box-shadow: 0 20px 39px yellow, 0 15px 7px yellow;
   }
+
+  .number-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .name-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
