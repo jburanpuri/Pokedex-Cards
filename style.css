@@ -15,7 +15,7 @@
     align-items: center;
     margin-top: 1%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     height: auto;
   }
   
@@ -120,43 +120,48 @@
     padding: 0;
   }
 
-  .namesearch {
+  .nameInput {
     text-align: center;
     display: inline-flex;
     flex: 1 1 300px;
     position: relative;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 3px solid #ccc;
+    border-radius: 2px;
     overflow: hidden;
   }
 
-  .numbersearch {
+  .numberInput {
     display: inline-flex;
     text-align: center;
     flex: 1 1 300px;
     position: relative;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 3px solid #ccc;
+    border-radius: 2px;
     overflow: hidden;
   }
-  
-  .searchIcon {
-    padding: 0.5rem;
-  }
-  
-  .searchBox {
-    border: 0;
-    padding: 0.5rem 0.5rem 0.5rem 0;
-    flex: 1;
+
+  .numberInput{
+    width: 100%;
     text-align:center;
+    margin: 1em 0;
   }
-  
-  .numbersearch{
+
+  .nameInput{
     width: 100%;
     text-align:center;
   }
 
-  .namesearch{
-    width: 100%;
-    text-align:center;
+  button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10%;
+    background-color: #001f3f;
+    margin-left: 0.5%;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    padding: 6px 10px;
   }

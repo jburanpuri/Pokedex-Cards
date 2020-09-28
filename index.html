@@ -3,214 +3,228 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google font import -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Grandstander:wght@100;200;300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <!-- Load icon library -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
 <title>Pokedex</title>
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <!-- Place your content here -->
-    <div class="name-search">
-      <input
-        type="text"
-        placeholder="Enter Pokemon Name"
-        name="search"
-        id="name-search"
-      />
-      <button type="submit" id="name-submit" onclick="nameSubmit()">
-        <i class="fa fa-search"></i>
-      </button>
-    </div>
-    <div class="number-search">
-      <input
-        type="number"
-        placeholder="Enter Pokedex Number"
-        min="1"
-        max="20"
-        id="number-search"
-      />
-      <button type="submit" onclick="numberSubmit()">
-        <i class="fa fa-search"></i>
-      </button>
-    </div>
+<h1>Pokedex</h1>
 
-    <h1>Pokedex</h1>
+<form>
+  <label>Number Search</label>
+  <input id="numberInput" placeholder="Enter a number">
+  <button onclick="numSearch()">Submit</button>
+</form>
+<br>
+<form>
+  <label>Text Search</label>
+  <input id="nameInput" placeholder="Enter a Pokemon Name">
+  <button onclick="stringSearch()">Submit</button>
+</form>
 
     <ul class="pokemon-container">
         <li class="grass">
-            <h3>Pokemon 1 - Bulbasaur</h3>
-            <img src="./pokemon/1.png" />
-            <p>There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.</p>
+          <h2>Bulbasaur</h2>
+          <h3>Pokemon 1</h3>
+          <img src="./pokemon/1.png" />
+          <p>There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.</p>
         </li>
 
 
         <li class="grass">
-            <h3>Pokemon 2 - Ivysaur</h3>
-            <img src="./pokemon/2.png" />
-            <p>When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.
-            </p>
+          <h2>Ivysaur</h2>
+          <h3>Pokemon 2</h3>
+          <img src="./pokemon/2.png" />
+          <p>When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.
+          </p>
         </li class="grass">
 
 
         <li class="grass">
-            <h3>Pokemon 3- Venusaur</h3>
-            <img src="./pokemon/3.png" />
-            <p>Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.
-            </p>
+          <h2>Venasaur</h2>
+          <h3>Pokemon 3</h3>
+          <img src="./pokemon/3.png" />
+          <p>Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.
+          </p>
         </li>
 
 
         <li class="fire">
-            <h3>Pokemon 4 - Charmander</h3>
-            <img src="./pokemon/4.png" />
-            <p>It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.
-            </p>
+          <h2>Charmander</h2>
+          <h3>Pokemon 4</h3>
+          <img src="./pokemon/4.png" />
+          <p>It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.
+          </p>
         </li>
 
 
         <li class="fire">
-            <h3>Pokemon 5 - Charmeleon</h3>
-            <img src="./pokemon/5.png" />
-            <p>It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws.
-            </p>
+          <h2>Charmaleon</h2>
+          <h3>Pokemon 5</h3>
+          <img src="./pokemon/5.png" />
+          <p>It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws.
+           </p>
         </li>
 
 
         <li class="fire">
-            <h3>Pokemon 6 - Charizard</h3>
-            <img src="./pokemon/6.png" />
-            <p>It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.
-            </p>
+          <h2>Charizard</h2>
+          <h3>Pokemon 6</h3>
+          <img src="./pokemon/6.png" />
+          <p>It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.
+          </p>
         </li>
 
 
         <li class="water">
-            <h3>Pokemon 7 - Squirtle</h3>
-            <img src="./pokemon/7.png" />
-            <p>When it retracts its long neck into its shell, it squirts out water with vigorous force.
-            </p>
+          <h2>Squirtle</h2>
+          <h3>Pokemon 7</h3>
+          <img src="./pokemon/7.png" />
+          <p>When it retracts its long neck into its shell, it squirts out water with vigorous force.
+          </p>
         </li>
 
 
         <li class="water">
-            <h3>Pokemon 8 - Wartortle</h3>
-            <img src="./pokemon/8.png" />
-            <p>It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old.
-            </p>
+          <h2>Wartotle</h2>
+          <h3>Pokemon 8</h3>
+          <img src="./pokemon/8.png" />
+          <p>It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old.
+          </p>
         </li>
 
 
         <li class="water">
-            <h3>Pokemon 9 - Blastoise</h3>
-            <img src="./pokemon/9.png" />
-            <p>It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.
-            </p>
+          <h2>Blastoise</h2>
+          <h3>Pokemon 9</h3>
+          <img src="./pokemon/9.png" />
+          <p>It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.
+          </p>
         </li>
 
 
         <li class="bug">
-            <h3>Pokemon 10 - Caterpie</h3>
-            <img src="./pokemon/10.png" />
-            <p>For protection, it releases a horrible stench from the antenna on its head to drive away enemies.
-            </p>
+          <h2>Caterpie</h2>
+          <h3>Pokemon 10</h3>
+          <img src="./pokemon/10.png" />
+          <p>For protection, it releases a horrible stench from the antenna on its head to drive away enemies.
+          </p>
         </li>
 
 
         <li class="bug">
-            <h3>Pokemon 11 - Metapod</h3>
-            <img src="./pokemon/11.png" />
-            <p>It is waiting for the moment to evolve. At this stage, it can only harden, so it remains motionless to avoid attack.
-            </p>
+          <h2>Metapod</h2>
+          <h3>Pokemon 11</h3>
+          <img src="./pokemon/11.png" />
+          <p>It is waiting for the moment to evolve. At this stage, it can only harden, so it remains motionless to avoid attack.
+          </p>
         </li>
 
 
         <li class="bug">
-            <h3>Pokemon 12 - Butterfree</h3>
-            <img src="./pokemon/12.png" />
-            <p>In battle, it flaps its wings at great speed to release highly toxic dust into the air.
-            </p>
+          <h2>Butterfree</h2>
+          <h3>Pokemon 12</h3>
+          <img src="./pokemon/12.png" />
+          <p>In battle, it flaps its wings at great speed to release highly toxic dust into the air.
+          </p>
         </li>
 
 
         <li class="bug">
-            <h3>Pokemon 13 - Weedle</h3>
-            <img src="./pokemon/13.png" />
-            <p>Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves.
-            </p>
+          <h2>Weedle</h2>
+          <h3>Pokemon 13</h3>
+          <img src="./pokemon/13.png" />
+          <p>Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves.
+          </p>
         </li>
 
 
         <li class="bug">
-            <h3>Pokemon 14 - Kakuna</h3>
-            <img src="./pokemon/14.png" />
-            <p>Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.
-            </p>
+          <h2>Kakuna</h2>
+          <h3>Pokemon 14</h3>
+          <img src="./pokemon/14.png" />
+          <p>Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.
+          </p>
         </li>
 
 
         <li class="bug">
-            <h3>Pokemon 15 - Beedrill</h3>
-            <img src="./pokemon/15.png" />
-            <p>It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.
-            </p>
+          <h2>Beedrill</h2>
+          <h3>Pokemon 15</h3>
+          <img src="./pokemon/15.png" />
+            p>It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.
+          </p>
         </li>
 
 
         <li class="normal">
-            <h3>Pokemon 16 - Pidgey</h3>
-            <img src="./pokemon/16.png" />
-            <p>Very docile. If attacked, it will often kick up sand to protect itself rather than fight back.
-            </p>
+          <h2>Pidgey</h2>
+          <h3>Pokemon 16</h3>
+          <img src="./pokemon/16.png" />
+          <p>Very docile. If attacked, it will often kick up sand to protect itself rather than fight back.
+          </p>
         </li>
 
 
         <li class="normal">
-            <h3>Pokemon 17 - Pidgeotto</h3>
-            <img src="./pokemon/17.png" />
-            <p>This Pokémon is full of vitality. It constantly flies around its large territory in search of prey.
-            </p>
+          <h2>Pidgeotto</h2>
+          <h3>Pokemon 17</h3>
+          <img src="./pokemon/17.png" />
+          <p>This Pokémon is full of vitality. It constantly flies around its large territory in search of prey.
+          </p>
         </li>
 
 
         <li class="normal">
-            <h3>Pokemon 18 - Pidgeot</h3>
-            <img src="./pokemon/18.png" />
-            <p>This Pokémon flies at Mach 2 speed, seeking prey. Its large talons are feared as wicked weapons.
-            </p>
+          <h2>Pidgeot</h2>
+          <h3>Pokemon 18</h3>
+          <img src="./pokemon/18.png" />
+          <p>This Pokémon flies at Mach 2 speed, seeking prey. Its large talons are feared as wicked weapons.
+          </p>
         </li>
         
 
         <li class="normal">
-            <h3>Pokemon 19 - Rattata</h3>
-            <img src="./pokemon/19.png" />
-            <p>Will chew on anything with its fangs. If you see one, you can be certain that 40 more live in the area.
-            </p>
+          <h2>Rattata</h2>
+          <h3>Pokemon 19</h3>
+          <img src="./pokemon/19.png" />
+          <p>Will chew on anything with its fangs. If you see one, you can be certain that 40 more live in the area.
+          </p>
         </li>
 
 
         <li class="normal">
-            <h3>Pokemon 20 - Raticate</h3>
-            <img src="./pokemon/20.png" />
-            <p>Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey.
-            </p>
+          <h2>Raticate</h2>
+          <h3>Pokemon 20</h3>
+          <img src="./pokemon/20.png" />
+          <p>Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey.
+          </p>
         </li>
     </ul>
 
-<div class="footer">
-    <h4>Sources</p>
-    <div class="footer-grid">
-      <div class="footer-grid-left">
-        <p class="resource-text">
+    <!-- Popup -->
+    <div id="myModal" class="modal">
+      <!-- Popup content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="search-results"></h2>
+        <ul id="modal-result"></ul>
+      </div>
+    </div>
+
+    <hr/>
+<div>
+    <h1>Sources</h1>
+        <p>
           Pokemon Images Dataset:
           <a
             href="https://www.kaggle.com/kvpratama/pokemon-images-dataset"
@@ -229,11 +243,6 @@
             href="https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/"
             >https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/</a
           >
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <script type="text/javascript" src="script.js"></script>
+</div>
 </body>
 </html>
