@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Load icon library -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<head>
+    <meta charset="utf-8">
+    <title>Pokédex</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
 
-<title>Pokedex</title>
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="stylesheet" href="style.css" />
-<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <!-- Place your content here -->
 <h1>Pokedex</h1>
-
+<hr/>
 <form>
   <label>Number Search</label>
   <input id="numberInput" placeholder="Enter a number">
   <button onclick="numSearch()">Submit</button>
 </form>
 <br>
-<form>
+<form> 
   <label>Text Search</label>
   <input id="nameInput" placeholder="Enter a Pokemon Name">
   <button onclick="stringSearch()">Submit</button>
 </form>
+
+<hr/>
 
     <ul class="pokemon-container">
         <li class="grass">
