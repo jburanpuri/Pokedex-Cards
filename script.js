@@ -13,7 +13,7 @@ function stringSearch(){
         var search = document.getElementById("search");
         document.body.insertBefore(node, search);
     }
-    var uInput = document.getElementById("namegInput").value.toLowerCase();
+    var uInput = document.getElementById("nameInput").value.toLowerCase();
     var node= document.getElementById("search");
     node.querySelectorAll('*').forEach(n => n.remove())
     if(uInput!="" && uInput.length <= 20 && !/[^a-zA-Z]/.test(uInput)){
