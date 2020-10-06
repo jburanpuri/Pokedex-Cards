@@ -3,7 +3,6 @@
   padding: 1;
 }
 
-
 body {
   background-size: 100vw;
   background-attachment: fixed;
@@ -19,11 +18,21 @@ body {
   height: auto;
 }
 
+.card{
+  background-color: silver;
+  list-style: none;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 20px 39px gray, 0 15px 7px gray;
+  -webkit-box-shadow: 0 20px 39px gray, 0 15px 7px gray;
+  border: 4px solid
+}
+
 .name{
-  font-size: 50px;
+  font-size: 30px;
 }
 .cardType{
-  font-size: 35px;
+  font-size: 20px;
 }
 
 li {
@@ -39,37 +48,14 @@ li {
   max-width: 80%;
 }
 
-li:hover {
-  transition: 1s;
-}
-
-li img {
-  width: 75%;
-  height: 75%;
-}
-
 h1 {
   text-align: center;
   color: blue
 }
 
-h4 {
-  padding: 5%;
-  font-size: 100%;
-  color: rgb(58, 58, 58);
-}
-
-h5 {
-  padding: 5%;
-  font-size: 100%;
-  width: 100%;
+h2 {
   text-align: center;
-  color:  rgb(58, 58, 58);
-}
-
-p {
-  font-size: 150%;
-  text-align: center;
+  color: gray
 }
 
 hr {
@@ -103,5 +89,3 @@ button {
   grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
   grid-gap: 10px;
 }
-
-body{background-color:orangered; margin:0}

@@ -57,11 +57,10 @@ function createPokemon(x,location){
     var node = document.createElement("li");
     node.id = pokemon[x][1];
     node.className ="card";
-    node.className= "li";
 
     var pokeName = document.createElement("p");
-    pokeName.textContent = pokemon[x][0] + "-" +" "+pokemon[x][1];
-    pokeName.className ="card";
+    pokeName.textContent = pokemon[x][0] + " - " +pokemon[x][1];
+    pokeName.className ="name";
 
     var image = document.createElement("img"); 
     image.src="pokemon/"+(x+1)+".png";
