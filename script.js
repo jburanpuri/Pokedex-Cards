@@ -1,5 +1,5 @@
-let pokemon = [["1","Bulbasaur","Grass, Poison"],["2","Ivysaur","Grass, Poison"],["3","Venusaur","Grass, Poison"],["4","Charmander","Fire"],["5","Charmeleon","Fire"],
-["6","Charizard","Fire, Flying"],["7","Squirtle","Water"],["8","Wartortle","Water"],["9","Blastoise","Water"],["10","Caterpie","Bug"],["11","Metapod","Bug"],
+let pokemon = [["01","Bulbasaur","Grass, Poison"],["02","Ivysaur","Grass, Poison"],["03","Venusaur","Grass, Poison"],["04","Charmander","Fire"],["05","Charmeleon","Fire"],
+["06","Charizard","Fire, Flying"],["07","Squirtle","Water"],["08","Wartortle","Water"],["09","Blastoise","Water"],["10","Caterpie","Bug"],["11","Metapod","Bug"],
 ["12","Butterfree","Bug, Flying"],["13","Weedle","Bug, Poison"],["14","Kakuna","Bug, Poison"],["15","Beedrill","Bug, Poison"],["16","Pidgey","Normal, Flying"],
 ["17","Pidgeotto","Normal, Flying"],["18","Pidgeot","Normal, Flying"],["19","Rattata","Normal"],["20","Raticate","Normal"]] //array of pokemon
 
