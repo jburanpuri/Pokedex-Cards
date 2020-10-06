@@ -8,7 +8,7 @@ function stringSearch(){ //function to search for pokemon names
     var node = document.createElement("h2");
     node.id = "searchHeader";
     node.textContent =  "Search";
-    var header = document.getElementById("searchHeader"); 
+    var header = document.getElementById("searchHeader");  //creates search header
     if(!(document.body.contains(header))){
         var search = document.getElementById("search");
         document.body.insertBefore(node, search);
