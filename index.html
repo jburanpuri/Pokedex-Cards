@@ -7,28 +7,30 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-
 </head>
+
 <body>
 <!-- Place your content here -->
 <h1>Pokedex</h1>
 <hr/>
+
 <form>
   <label>Number Search</label>
-  <input id="numInput" placeholder="Enter a number">
-  <button oninput="numSearch()">Submit</button>
+  <input id="numInput" placeholder="Enter a number" oninput="numSearch()">
+  <button>Submit</button>
 </form>
 <br>
 <form> 
   <label>Text Search</label>
-  <input id="nameInput" placeholder="Enter a Pokemon Name">
-  <button oninput="stringSearch()">Submit</button>
+  <input id="nameInput" placeholder="Enter a Pokemon Name" oninput="stringSearch()">
+  <button>Submit</button>
 </form>
 
 <div id='search'></div>
 
 <hr/>
   <h2>Pokemon</h2>
+
 <ul id='pokedex'>
   <script>createPokemons()</script>
 </ul>
