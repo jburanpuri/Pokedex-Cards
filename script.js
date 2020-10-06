@@ -52,3 +52,34 @@ function numSearch(){
         header.remove();
     }
 }
+
+function createPokemon(x,location){
+    var node = document.createElement("li");
+    node.id = pokemon[x][1];
+    node.className ="card";
+    node.className= "li";
+
+    var pokeName = document.createElement("p");
+    pokeName.textContent = pokemon[x][0] + "-" +" "+pokemon[x][1];
+    pokeName.className ="card";
+
+    var image = document.createElement("img"); 
+    image.src="pokemon/"+(x+1)+".png";
+    image.className = "li img";
+
+    var desc = document.createElement("p");
+    desc.textContent = "Type: "+pokemon[x][2];
+    desc.className ="cardType";
+
+
+    document.getElementById(location).appendChild(node);
+    document.getElementById(pokemon[x][1]).appendChild(pokeName);
+    document.getElementById(pokemon[x][1]).appendChild(image);
+    document.getElementById(pokemon[x][1]).appendChild(desc);
+}
+
+function createPokemons(){
+    for(var i =0; i < 20 ; i++){
+        createPokemon(i,"pokedex")
+    }
+}

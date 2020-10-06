@@ -9,7 +9,7 @@ body {
   background-attachment: fixed;
 }
 
-.pokemon-container {
+#pokedex {
   list-style-type: none;
   justify-content: center;
   align-items: center;
@@ -19,6 +19,12 @@ body {
   height: auto;
 }
 
+.name{
+  font-size: 50px;
+}
+.cardType{
+  font-size: 35px;
+}
 
 li {
   display: flex;
@@ -65,52 +71,6 @@ p {
   font-size: 150%;
   text-align: center;
 }
-  
-.grass {
-  border: 6px solid green;
-}
-
-.grass:hover {
-  box-shadow: 0 20px 39px green, 0 15px 7px green;
-  -webkit-box-shadow: 0 20px 39px green, 0 15px 7px green;
-  
-}
-
-.water {
-  border: 6px solid blue;
-}
-
-.water:hover {
-  box-shadow: 0 20px 39px blue, 0 15px 7px blue;
-  -webkit-box-shadow: 0 20px 39px blue, 0 15px 7px blue;
-}
-
-.fire {
-  border: 6px solid red;
-}
-
-.fire:hover {
-  box-shadow: 0 20px 39px red, 0 15px 7px red;
-  -webkit-box-shadow: 0 20px 39px red, 0 15px 7px red;
-}
-
-.normal {
-  border: 6px solid grey;
-}
-
-.normal:hover {
-  box-shadow: 0 20px 39px grey, 0 15px 7px grey;
-  -webkit-box-shadow: 0 20px 39px grey, 0 15px 7px grey;
-}
-
-.bug {
-  border: 6px solid yellow;
-}
-
-.bug:hover {
-  -webkit-box-shadow: 0 20px 39px yellow, 0 15px 7px yellow;
-  box-shadow: 0 20px 39px yellow, 0 15px 7px yellow;
-}
 
 hr {
   display: block;
@@ -135,3 +95,13 @@ button {
   outline: none;
   padding: 6px 10px;
 }
+
+#search{
+  background-color:white;
+  padding-inline-start: 10;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-gap: 10px;
+}
+
+body{background-color:orangered; margin:0}
