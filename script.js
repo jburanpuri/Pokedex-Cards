@@ -4,51 +4,51 @@ let pokemon = [["1","Bulbasaur","Grass, Poison"],["2","Ivysaur","Grass, Poison"]
 ["17","Pidgeotto","Normal, Flying"],["18","Pidgeot","Normal, Flying"],["19","Rattata","Normal"],["20","Raticate","Normal"]] //array of pokemon
 
 
-function stringSearch(){ //searches array for pokemon name or type
-    var uInput = document.getElementById("nameInput").value.toLowerCase(); //makes string lower case
-    let result = "";
-    let resultCount = 0;
-
-    if(uInput!="" && uInput.length <= 20 && !/[^a-zA-Z]/.test(uInput)){ //takes input
-        for (var i = 0; i < pokemon.length && resultCount<5; i++) {
-            if(pokemon[i][1].toLowerCase().includes(uInput)||(pokemon[i][2].toLowerCase().includes(uInput)&&uInput.length>2)){
-                result+="#0"+pokemon[i][0]+" "+pokemon[i][1]+" | Type: "+pokemon[i][2]+"\n"; //searches string for matching name
-                resultCount++; //loops around
+function stringSearch(){
+    var node = document.createElement("h2");
+    node.id = "searchHeader";
+    node.textContent =  "Search";
+    var header = document.getElementById("searchHeader"); 
+    if(!(document.body.contains(header))){
+        var search = document.getElementById("search");
+        document.body.insertBefore(node, search);
+    }
+    var uInput = document.getElementById("namegInput").value.toLowerCase();
+    var node= document.getElementById("search");
+    node.querySelectorAll('*').forEach(n => n.remove())
+    if(uInput!="" && uInput.length <= 20 && !/[^a-zA-Z]/.test(uInput)){
+        for (var i = 0; i < pokemon.length; i++) {
+            if(pokemon[i][1].toLowerCase().includes(uInput)){
+                createPokemon(i,"search");
             }
         }
-        if(result==""){
-            alert("No Results Found");
-        }
-        else{
-            alert(result);
-        }
     }
-    else{
-        alert("Error")
+    if (uInput==""){
+        header.remove();
     }
 }
 
 
-function numSearch(){ //search array for pokemon number
-    var uInput = document.getElementById("numberInput").value; //takes number value
-    let result = "";
-    let resultCount = 0;
-
-    if(uInput!="" && parseInt(uInput) >= 1 && parseInt(uInput) <= 20){ //makes sure number is between 1-20
-        for (var i = 0; i < pokemon.length && resultCount<5; i++) {
+function numSearch(){
+    var node = document.createElement("h2");
+    node.id = "searchHeader";
+    node.textContent =  "Search";
+    var header = document.getElementById("searchHeader"); 
+    if(!(document.body.contains(header))){
+        var search = document.getElementById("search");
+        document.body.insertBefore(node, search);
+    }
+    var uInput = document.getElementById("numInput").value.toLowerCase();
+    var node= document.getElementById("search");
+    node.querySelectorAll('*').forEach(n => n.remove())
+    if(uInput!="" && parseInt(uInput) >= 1 && parseInt(uInput) <= 20){
+        for (var i = 0; i < pokemon.length; i++) {
             if(pokemon[i][0].includes(uInput)){
-                result+="#"+pokemon[i][0]+" "+pokemon[i][1]+" | Type: "+pokemon[i][2]+"\n"; //searches string for number
-                resultCount++;
+                createPokemon(i,"search");
             }
         }
-        if(result==""){
-            alert("No Results Found");
-        }
-        else{
-            alert(result);
-        }
     }
-    else{
-        alert("Error, please enter a number between 1-20.") //error for when user does not enter a number between 1-20
+    else if (uInput==""){
+        header.remove();
     }
 }
