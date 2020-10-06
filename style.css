@@ -3,13 +3,12 @@
   padding: 1;
 }
 
-
 body {
   background-size: 100vw;
   background-attachment: fixed;
 }
 
-.pokemon-container {
+#pokedex {
   list-style-type: none;
   justify-content: center;
   align-items: center;
@@ -19,6 +18,22 @@ body {
   height: auto;
 }
 
+.card{
+  background-color: silver;
+  list-style: none;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 20px 39px gray, 0 15px 7px gray;
+  -webkit-box-shadow: 0 20px 39px gray, 0 15px 7px gray;
+  border: 4px solid
+}
+
+.name{
+  font-size: 30px;
+}
+.cardType{
+  font-size: 20px;
+}
 
 li {
   display: flex;
@@ -33,83 +48,14 @@ li {
   max-width: 80%;
 }
 
-li:hover {
-  transition: 1s;
-}
-
-li img {
-  width: 75%;
-  height: 75%;
-}
-
 h1 {
   text-align: center;
   color: blue
 }
 
-h4 {
-  padding: 5%;
-  font-size: 100%;
-  color: rgb(58, 58, 58);
-}
-
-h5 {
-  padding: 5%;
-  font-size: 100%;
-  width: 100%;
+h2 {
   text-align: center;
-  color:  rgb(58, 58, 58);
-}
-
-p {
-  font-size: 150%;
-  text-align: center;
-}
-  
-.grass {
-  border: 6px solid green;
-}
-
-.grass:hover {
-  box-shadow: 0 20px 39px green, 0 15px 7px green;
-  -webkit-box-shadow: 0 20px 39px green, 0 15px 7px green;
-  
-}
-
-.water {
-  border: 6px solid blue;
-}
-
-.water:hover {
-  box-shadow: 0 20px 39px blue, 0 15px 7px blue;
-  -webkit-box-shadow: 0 20px 39px blue, 0 15px 7px blue;
-}
-
-.fire {
-  border: 6px solid red;
-}
-
-.fire:hover {
-  box-shadow: 0 20px 39px red, 0 15px 7px red;
-  -webkit-box-shadow: 0 20px 39px red, 0 15px 7px red;
-}
-
-.normal {
-  border: 6px solid grey;
-}
-
-.normal:hover {
-  box-shadow: 0 20px 39px grey, 0 15px 7px grey;
-  -webkit-box-shadow: 0 20px 39px grey, 0 15px 7px grey;
-}
-
-.bug {
-  border: 6px solid yellow;
-}
-
-.bug:hover {
-  -webkit-box-shadow: 0 20px 39px yellow, 0 15px 7px yellow;
-  box-shadow: 0 20px 39px yellow, 0 15px 7px yellow;
+  color: gray
 }
 
 hr {
@@ -134,4 +80,12 @@ button {
   color: white;
   outline: none;
   padding: 6px 10px;
+}
+
+#search{
+  background-color:white;
+  padding-inline-start: 10;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-gap: 10px;
 }
